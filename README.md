@@ -95,8 +95,6 @@ vagrant@vagrant:/tmp$ cp /bin/bash /tmp/new_path_directory/bash
 
 vagrant@vagrant:~$ PATH=/tmp/new_path_directory:$PATH
 
-vagrant@vagrant:~$ echo $PATH
-/tmp/new_path_directory:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 vagrant@vagrant:~$ type -a bash
 bash is /tmp/new_path_directory/bash
 bash is /usr/bin/bash
