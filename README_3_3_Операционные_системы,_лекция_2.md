@@ -93,7 +93,7 @@ node_network_receive_errs_total{device="eth0"} 0
 
 Netdata установил, в Vagrantfile изменил, зашел с ПК на localhost:19999. Скришот доступен по ссылке:
 
-
+https://github.com/ivdfor/devops-netology/blob/main/Netdata.jpg
 
 4. Можно ли по выводу dmesg понять, осознает ли ОС, что загружена не на настоящем оборудовании, а на системе виртуализации?
 
