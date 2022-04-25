@@ -31,7 +31,9 @@ WantedBy=multi-user.target
 	b) Перезапустил сервис, проверил статус, убедился что статус active (running):
 
 vagrant@vagrant:~$ sudo systemctl daemon-reload
+
 vagrant@vagrant:~$ sudo systemctl start node_exporter
+
 vagrant@vagrant:~$ sudo systemctl status node_exporter
 
 	c) Добавил в автозагрузку:
@@ -47,8 +49,6 @@ vagrant@vagrant:~$ sudo systemctl enable
 
 vagrant@vagrant:~$ curl http://localhost:9100/metrics
 
-# HELP node_cpu_seconds_total Seconds the cpus spent in each mode.
-# TYPE node_cpu_seconds_total counter
 node_cpu_seconds_total{cpu="0",mode="idle"} 6852.27
 node_cpu_seconds_total{cpu="0",mode="iowait"} 13.75
 node_cpu_seconds_total{cpu="0",mode="irq"} 0
@@ -57,28 +57,19 @@ node_cpu_seconds_total{cpu="0",mode="softirq"} 0.71
 node_cpu_seconds_total{cpu="0",mode="steal"} 0
 node_cpu_seconds_total{cpu="0",mode="system"} 8.8
 
-# TYPE node_memory_MemAvailable_bytes gauge
 node_memory_MemAvailable_bytes 3.60470528e+09
-# TYPE node_memory_MemFree_bytes gauge
 node_memory_MemFree_bytes 2.834587648e+09
-# TYPE node_memory_MemTotal_bytes gauge
 node_memory_MemTotal_bytes 4.126908416e+09
 
-# TYPE node_disk_io_time_seconds_total counter
 node_disk_io_time_seconds_total{device="dm-0"} 95.428
 node_disk_io_time_seconds_total{device="sda"} 99.516
-# TYPE node_disk_read_bytes_total counter
 node_disk_read_bytes_total{device="dm-0"} 4.64823296e+08
 node_disk_read_bytes_total{device="sda"} 4.78025728e+08
-# TYPE node_disk_read_time_seconds_total counter
 node_disk_read_time_seconds_total{device="dm-0"} 17.048000000000002
 node_disk_read_time_seconds_total{device="sda"} 12.982000000000001
 
-# TYPE node_network_receive_bytes_total counter
 node_network_receive_bytes_total{device="eth0"} 8.2748914e+07
-# TYPE node_network_receive_drop_total counter
 node_network_receive_drop_total{device="eth0"} 0
-# TYPE node_network_receive_errs_total counter
 node_network_receive_errs_total{device="eth0"} 0
 
 3. Установите в свою виртуальную машину Netdata. Воспользуйтесь готовыми пакетами для установки (sudo apt install -y netdata). 
