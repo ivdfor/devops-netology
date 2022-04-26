@@ -35,7 +35,9 @@ Change_Port = "--web.listen-address=:9199"
 после перезапуска видим, что прослушивается порт 9199:
 
 vagrant@vagrant:~$ sudo systemctl status node_exporter
+
 skipped....
+
 Apr 26 22:32:32 vagrant node_exporter[2271]: time="2022-04-26T22:32:32Z" level=info msg="Listening on :9199" source="node_exporter.go:170"
  
 
