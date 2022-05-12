@@ -168,6 +168,6 @@ udp-порт 48322 - Unassigned
 
 Диаграмма доступна по ссылке:
 
-
+https://github.com/ivdfor/devops-netology/blob/main/jpg/%D0%94%D0%97%20%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B5%20%D1%81%D0%B5%D1%82%D0%B8%203/diagram.drawio
 
 
