@@ -155,8 +155,11 @@ UNCONN                  0                       0                               
 UNCONN                  0                       0                                                 [::]:5353                                            [::]:*   
 
 udp-порт 5353 - Multicast DNS
+
 udp-порт 44453 - Unassigned
+
 udp-порт 631 -  IPP (Internet Printing Protocol)
+
 udp-порт 48322 - Unassigned
                                            
 
