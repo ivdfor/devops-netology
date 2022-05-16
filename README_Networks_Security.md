@@ -147,30 +147,46 @@ SHA256:pbJ3yX8FXivK8zr6/W4IfqIBTt7C6nbd1Wgf/jyt2Kc igord@ubuntu
 The key's randomart image is:
 
 +---[RSA 3072]----+
+
 |                 |
+
 |                 |
+
 |          .      |
+
 |         o    . .|
+
 |      .oS    .oo.|
+
 |      =oo. o =.+.|
+
 |      .=ooB = =.o|
+
 |     ..o.o.X.=.*o|
+
 |    oo.  o+oX+E*=|
+
 +----[SHA256]-----+
 
 
 Пересылаем свой публичный ключ на другой сервер:
 
 igord@ubuntu:~$ sudo ssh-copy-id -i ~/.ssh/id_rsa.pub igordv@192.168.28.132
+
 /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/igord/.ssh/id_rsa.pub"
+
 /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+
 /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+
 igordv@192.168.28.132's password: 
 
 Number of key(s) added: 1
 
 Now try logging into the machine, with:   "ssh 'igordv@192.168.28.132'"
+
 and check to make sure that only the key(s) you wanted were added.
+
 
 Перезапускаем сервер:
 
@@ -179,18 +195,25 @@ igord@ubuntu:~$ sudo service sshd restart
 Убеждаемся, что заходим на него:
 
 igord@ubuntu:~$ ssh igordv@192.168.28.132
+
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-41-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
+
  * Management:     https://landscape.canonical.com
+
  * Support:        https://ubuntu.com/advantage
 
 281 updates can be applied immediately.
+
 187 of these updates are standard security updates.
+
 To see these additional updates run: apt list --upgradable
 
 Your Hardware Enablement Stack (HWE) is supported until April 2025.
+
 Last login: Mon May 16 05:14:12 2022 from 192.168.28.131
+
 igordv@ubuntu:~$ 
 
 
@@ -201,26 +224,38 @@ igordv@ubuntu:~$
 igord@ubuntu:~$ sudo mv ~/.ssh/id_rsa ~/.ssh/id_rsa_change_name
 
 igord@ubuntu:~$ cat ~/.ssh/config
+
 Host VM2
+
         HostName 192.168.28.132
+
         User igordv
+
         Port 22
+
         IdentityFile ~/.ssh/id_rsa_change_name
 
 
 igord@ubuntu:~$ ssh VM2
+
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-41-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
+
  * Management:     https://landscape.canonical.com
+
  * Support:        https://ubuntu.com/advantage
 
 111 updates can be applied immediately.
+
 To see these additional updates run: apt list --upgradable
 
 Your Hardware Enablement Stack (HWE) is supported until April 2025.
+
 *** System restart required ***
+
 Last login: Mon May 16 05:15:42 2022 from 192.168.28.131
+
 igordv@ubuntu:~$ 
 
 
@@ -229,9 +264,13 @@ igordv@ubuntu:~$
 Ответ:
 
 igord@ubuntu:~$ sudo tcpdump -i ens33 -c 100 -w traffic_100.pcap
+
 tcpdump: listening on ens33, link-type EN10MB (Ethernet), capture size 262144 bytes
+
 100 packets captured
+
 118 packets received by filter
+
 0 packets dropped by kernel
 
 Сссылка на скриншот c Wireshark и traffic_100.pcap доступен по ссылке:
