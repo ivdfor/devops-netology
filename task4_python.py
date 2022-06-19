@@ -2,6 +2,8 @@
 
 import socket
 import ast
+import json
+import yaml
 
 url_keys = ['drive.google.com', 'mail.google.com', 'google.com']
 dict_dns = {}
@@ -27,3 +29,14 @@ with open('task4_dns.dic', 'r+') as f:
 
 with open('task4_dns.dic', 'w') as f:
     f.write(str(dict_dns))
+
+
+with open('task4_dns.dic.js', 'w') as js, open('task4_dns.dic.yml', 'w') as yml:
+    json.dump(dict_dns, js)
+    yaml.dump(dict_dns, yml)
+
+#with open('task4_dns.dic.js') as js, open('task4_dns.dic.yml') as yml:
+#    print('\n', js.read(), '\n')
+#    print(yml.read())
+
+
