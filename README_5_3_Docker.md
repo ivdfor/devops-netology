@@ -8,6 +8,7 @@
 выберете любой образ, который содержит веб-сервер Nginx;
 создайте свой fork образа;
 реализуйте функциональность: запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
+```
 <html>
 <head>
 Hey, Netology
@@ -16,9 +17,15 @@ Hey, Netology
 <h1>I’m DevOps Engineer!</h1>
 </body>
 </html>
+```
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 
 ### Ответ:
+
+Ссылка:
+
+https://hub.docker.com/repository/docker/ivdfor/nginx-netology
+
 ```
 1) Логинюсь на docker.io
 
@@ -94,7 +101,6 @@ c57b67e296a6: Mounted from library/nginx
 24302eb7d908: Mounted from library/nginx 
 v1: digest: sha256:b01221d3c0420c084b8373dbc123bc1b3fa190c45dd73c94214b74f497ae9264 size: 1775
 
-https://hub.docker.com/repository/docker/ivdfor/nginx-netology
 ```
 
 ## Задача 2
