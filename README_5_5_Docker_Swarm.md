@@ -63,11 +63,10 @@ docker node ls
 
 ## Ответ
 
-```
 <p align="center">
   <img src="./5-5-images/5-5-2.jpg">
 </p>
-```
+
 
 ## Задача 3
 
@@ -79,11 +78,11 @@ docker service ls
 ```
 
 ## Ответ
-```
+
 <p align="center">
   <img src="./5-5-images/5-5-3.jpg">
 </p>
-```
+
 
 ## Задача 4 (*)
 
