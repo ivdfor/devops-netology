@@ -65,7 +65,7 @@ docker node ls
 
 ```
 <p align="center">
-  <img src="5-5-images/5-5-2.jpg">
+  <img src="./5-5-images/5-5-2.jpg">
 </p>
 ```
 
@@ -81,7 +81,7 @@ docker service ls
 ## Ответ
 ```
 <p align="center">
-  <img src="5-5-images/5-5-3.jpg">
+  <img src="./5-5-images/5-5-3.jpg">
 </p>
 ```
 
