@@ -12,7 +12,7 @@
 
 Приведите получившуюся команду или docker-compose манифест.
 
-## Ответ
+### Ответ
 
 ```
 igord@ubuntu:~/devops-netology/devops-netology/6.2.SQL$ cat docker-compose.yml 
@@ -51,7 +51,7 @@ test_db=#
 В БД из задачи 1: 
 - создайте пользователя test-admin-user и БД test_db
 
-## Ответ
+### Ответ
 ```
 Т.к. создал в docker-compose.yml, то результат повторного создания такой:
 
@@ -66,7 +66,7 @@ ERROR:  database "test_db" already exists
 - создайте пользователя test-simple-user  
 - предоставьте пользователю test-simple-user права на SELECT/INSERT/UPDATE/DELETE данных таблиц БД test_db
 
-## Ответ
+### Ответ
 ```
 test_db=# CREATE TABLE orders (
     id SERIAL,
@@ -110,7 +110,7 @@ GRANT
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
 - список пользователей с правами над таблицами test_db
 
-## Ответ
+### Ответ
 ```
 test_db=# \l+
                                                                                List of databases
@@ -220,7 +220,7 @@ test_db-# order by
     - запросы 
     - результаты их выполнения.
 
-## Ответ
+### Ответ
 ```
 test_db=# INSERT INTO orders VALUES (1, 'Шоколад', 10), (2, 'Принтер', 3000), (3, 'Книга', 500), (4, 'Монитор', 7000), (5, 'Гитара', 4000);
 INSERT 0 5
@@ -256,7 +256,7 @@ test_db=# select count (*) from clients;
  
 Подсказк - используйте директиву `UPDATE`.
 
-## Ответ
+### Ответ
 ```
 test_db=# UPDATE clients SET "заказ" = (SELECT id FROM orders WHERE "наименование"='Книга') WHERE "фамилия"='Иванов Иван Иванович';
 UPDATE 1
@@ -280,7 +280,7 @@ test_db=# SELECT c.* FROM clients c JOIN orders o ON c.заказ = o.id;
 
 Приведите получившийся результат и объясните что значат полученные значения.
 
-## Ответ
+### Ответ
 ```
 test_db=# EXPLAIN SELECT c.* FROM clients c JOIN orders o ON c.заказ = o.id;
                                QUERY PLAN                               
@@ -313,7 +313,7 @@ EXPLAIN - Эта команда отображает план выполнени
 
 Приведите список операций, который вы применяли для бэкапа данных и восстановления. 
 
-## Ответ
+### Ответ
 ```
 root@ubuntu:/home/igord/devops-netology/devops-netology/6.2.SQL# docker exec -t psql pg_dumpall -c -U test-admin-user > backup/test_db.sql
 root@ubuntu:/home/igord/devops-netology/devops-netology/6.2.SQL# docker compose down
